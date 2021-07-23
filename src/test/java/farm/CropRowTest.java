@@ -1,5 +1,9 @@
 package farm;
+
 import static org.junit.Assert.*;
+
+
+
 import crop.CornStalk;
 import crop.Crop;
 import org.junit.Assert;
@@ -7,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class CropRowTest {
+
     private Object CornStalk;
 
     @Before
@@ -16,6 +21,9 @@ public class CropRowTest {
 
 
     }
+
+    private Crop CornStalk;
+
 
     @Test
     public void getSize(){
@@ -29,8 +37,13 @@ public class CropRowTest {
     public void addCropRowTest(){
     //GIVEN
         CropRow cropR = new CropRow();
+
         Crop c = new CornStalk();
         cropR.addCropRow(c);
+
+        cropR.addCropRow(CornStalk);
+
+
     //WHEN
 
         Integer actual = cropR.getSize();

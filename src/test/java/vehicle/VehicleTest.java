@@ -6,6 +6,9 @@ import org.junit.Test;
 import person.Farmer;
 import person.Pilot;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class VehicleTest {
     @Test
     public void mountTest(){
@@ -20,7 +23,6 @@ public class VehicleTest {
 
         //then
         Assert.assertEquals(expected,actual);
-
 
     }
     @Test
@@ -50,10 +52,17 @@ public class VehicleTest {
         Rider<Plower> plowerRider3 = new Farmer(null);
 
         //when
-        plower.getPassengers();
+       plower.riders.add(plowerRider1);
+       plower.riders.add(plowerRider2);
+       plower.riders.add(plowerRider3);
+
+       List<Plower> actual = plower.getPassengers();
+       List<Rider> expected = Arrays.asList(new Rider[]{plowerRider1, plowerRider2, plowerRider3});
+
 
         //then
-        System.out.println();
+        Assert.assertEquals(expected,actual);
+
     }
     @Test
     public void makeNoiseTest(){
@@ -67,4 +76,5 @@ public class VehicleTest {
         //then
         Assert.assertEquals(expected,actual);
     }
+
 }

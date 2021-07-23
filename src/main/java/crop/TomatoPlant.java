@@ -15,6 +15,6 @@ public class TomatoPlant extends Crop {
 
     @Override
     public boolean hasBeenFertilized() {
-        return false;
+        return true;
     }
 }
