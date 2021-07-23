@@ -2,9 +2,12 @@ package person;
 
 import Interface.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
+    private ArrayList<Edible> stomach ;
+    List<Rideable> pilotRider;
     public Pilot(String name) {
         super(name);
     }
@@ -17,12 +20,18 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     @Override
     public List<Edible> getStomach() {
-        return null;
+        return stomach;
     }
 
     @Override
-    public void eat(Edible edible) {
-
+    public boolean eat(Edible edible) {
+        int beforeMeal = this.stomach.size();
+        this.stomach.add(edible);
+        int afterMeal = this.stomach.size();
+        if (beforeMeal < afterMeal) {
+            return true;
+        }
+        return false;
     }
 
     @Override
