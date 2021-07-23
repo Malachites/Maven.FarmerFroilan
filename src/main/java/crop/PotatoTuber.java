@@ -15,6 +15,6 @@ public class PotatoTuber extends Crop{
 
     @Override
     public boolean hasBeenFertilized() {
-        return false;
+        return true;
     }
 }
