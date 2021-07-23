@@ -8,12 +8,13 @@ import java.util.ArrayList;
 
 public class Farm {
 
+    ArrayList<Stable> stables;
     ArrayList<ChickenCoop> chickenCoops;
     ArrayList<Field> fields;
     FarmHouse farmHouse;
     String farmName;
 
-    ArrayList<Stable> stables;
+
 
     public String getFarmName() {
         return farmName;
@@ -43,4 +44,19 @@ public class Farm {
     public void addChickenCoop(ChickenCoop someCoop) {
         chickenCoops.add(someCoop);
     }
+
+  public void addStable(Stable moreHorses){
+        stables.add(moreHorses);
+    }
+
+    public FarmHouse getFarmHouse() {
+        return farmHouse;
+    }
+
+    public void setFarmHouse(FarmHouse farmHouse) {
+        this.farmHouse = farmHouse;
+    }
+
+
+
 }
