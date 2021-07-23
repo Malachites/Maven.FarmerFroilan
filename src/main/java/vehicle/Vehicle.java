@@ -6,14 +6,14 @@ import Interface.Rider;
 
 import java.util.List;
 
-public class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable {
+public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable {
     List<SomeTypeOfRider> riders;
 
-    public void addRider(SomeTypeOfRider rider){
+    public void mount(SomeTypeOfRider rider){
         riders.add(rider);
     }
 
-    public void removeRider(SomeTypeOfRider rider){
+    public void dismount(SomeTypeOfRider rider){
         riders.remove(rider);
     }
 
