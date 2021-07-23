@@ -1,9 +1,9 @@
 package crops;
 
-import crop.Tomato;
+
 import crop.TomatoPlant;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 
 //import static org.junit.Assert.assertEquals;
@@ -17,43 +17,44 @@ import org.junit.jupiter.api.Test;
 public class TomatoPlantTest {
 
 //    @Test
-//    public void yeildTest(){
+//    public void yieldTest2(){
 //        //Given
 //        TomatoPlant tomatoPlant = new TomatoPlant();
+//        Assertions.assertTrue(tomatoPlant.hasBeenFertilized());
 //
 //        //When
-//        boolean isEdible = tomatoPlant.hasBeenFertilized();
+//        Tomato tomato = tomatoPlant.yield();
 //
 //        //Then
-//        Assertions.assertTrue(isEdible);
-//
-//    }
+//        Assertions.assertNotNull(tomato); //don't fully understand what assert not null is doing, rewrote a similar test below
+
+   // }
 
     @Test
-    public void yieldTest2(){
+    public void hasBeenFertilizedTest() {
         //Given
-        TomatoPlant tomatoPlant = new TomatoPlant();
-        Assertions.assertTrue(tomatoPlant.hasBeenFertilized());
+        TomatoPlant tomato = new TomatoPlant();
+       // Assert.assertFalse(tomato.hasBeenFertilized());
 
         //When
-        Tomato tomato = tomatoPlant.yield();
+        tomato.fertilizeCrop();
+        tomato.hasBeenFertilized();
 
         //Then
-        Assertions.assertNotNull(tomato);
-
+        Assert.assertTrue(tomato.hasBeenFertilized());
     }
 
-//
-//    {
-//        //arrange
-//        TomatoPlant tomatoPlant = new TomatoPlant();
-//
-//        //act
-//        //TomatoPlant.getFoodName();
-//        String foodName = tomatoPlant.getFoodName("Tomato Crop");
-//
-//        //assert
-//        assertEquals("Tomato Crop", foodName);
-//    }
+    @Test
+    public void hasBeenHarvestedTest() {
+        //Given
+        TomatoPlant tomato = new TomatoPlant();
+
+        //When
+        tomato.harvestCrop();
+        tomato.yield();
+
+        //Then
+        Assert.assertTrue(tomato.hasBeenHarvested());
+    }
 }
 

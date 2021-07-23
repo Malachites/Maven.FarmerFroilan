@@ -1,4 +1,6 @@
 package vehicle;
 
-public class CropDuster {
+import person.Pilot;
+
+public class CropDuster extends Vehicle<Pilot> {
 }

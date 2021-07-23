@@ -3,6 +3,7 @@ package animal;
 import Interface.Edible;
 import Interface.NoiseMaker;
 import Interface.Produce;
+import crop.Egg;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +15,7 @@ public class Chicken extends Animal implements Produce, NoiseMaker {
         this.stomach = new ArrayList<Edible>();
     }
 
-    public Integer getStomachSize() {
-        return stomach.size();
-    }
-
-    public boolean eatFood(Edible edible) {
+    public boolean eat(Edible edible) {
         int beforeMeal = this.stomach.size();
         this.stomach.add(edible);
         int afterMeal = this.stomach.size();
@@ -33,10 +30,16 @@ public class Chicken extends Animal implements Produce, NoiseMaker {
     }
 
     public List<Edible> getStomach() {
-        return null;
+        return stomach;
     }
 
-    public Boolean hasBeenFertilized() {
-        return hasBeenFertilized();
+    @Override
+    public Edible yield() {
+        return new Egg();
+    }
+
+    @Override
+    public boolean hasBeenFertilized() {
+        return false;
     }
 }

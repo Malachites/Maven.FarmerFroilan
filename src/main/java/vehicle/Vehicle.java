@@ -4,24 +4,30 @@ import Interface.NoiseMaker;
 import Interface.Rideable;
 import Interface.Rider;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable {
-    List<SomeTypeOfRider> riders;
+public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable<SomeTypeOfRider> {
+    List<SomeTypeOfRider> riders = new ArrayList<>();
 
-    public void addRider(SomeTypeOfRider rider){
-        riders.add(rider);
-    }
 
-    public void removeRider(SomeTypeOfRider rider){
-        riders.remove(rider);
-    }
-
-    public void getNumberOfPassengers(){
-        riders.size();
-    }
     @Override
     public String makeNoise() {
         return "BEEP BEEP!";
+    }
+
+    @Override
+    public void mount(SomeTypeOfRider rider) {
+        riders.add(rider);
+    }
+
+    @Override
+    public void dismount(Rider rider) {
+        riders.remove(rider);
+    }
+
+    @Override
+    public List<SomeTypeOfRider> getPassengers() {
+        return riders;
     }
 }
