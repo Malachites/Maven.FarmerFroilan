@@ -15,7 +15,6 @@ public class CropRowTest {
         Crop c = new CornStalk();
 
 
-
     }
 
     @Test
