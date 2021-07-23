@@ -5,7 +5,9 @@ import java.util.List;
 public interface Eater <TypeOfFood extends Edible> {
 
     List<TypeOfFood> getStomach();
-    default void eat(TypeOfFood food) {
+    default boolean eat(TypeOfFood food) {
         getStomach().add(food);
+        return false;
     }
+
 }
