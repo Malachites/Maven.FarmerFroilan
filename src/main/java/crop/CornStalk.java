@@ -4,7 +4,7 @@ package crop;
 
 public class CornStalk extends Crop {
     @Override
-    public Boolean hasBeenFertilized() {
+    public boolean hasBeenFertilized() {
         return null;
     }
 
