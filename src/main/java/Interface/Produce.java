@@ -2,5 +2,7 @@ package Interface;
 
 public interface Produce {
 
-    Boolean hasBeenFertilized();
+    Edible yield();
+    boolean hasBeenFertilized();
+
 }

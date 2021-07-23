@@ -1,13 +1,12 @@
 package crop;
 
-//import Interface.Edible;
-
 import Interface.Edible;
 
-public class CornStalk extends Crop {
+public class PotatoTuber extends Crop{
+
     public Edible yield() {
         if (hasBeenFertilized() && hasBeenHarvested()) {
-            return new Corn();
+            return new Potato();
         }
         else {
             return null;
@@ -18,9 +17,4 @@ public class CornStalk extends Crop {
     public boolean hasBeenFertilized() {
         return false;
     }
-
-//    @Override
-//    public Edible yield() {
-//        return null;
-//    }
 }

@@ -2,7 +2,5 @@ package crop;
 
 import Interface.Edible;
 
-
-public class Corn implements Edible {
-
+public class Potato implements Edible {
 }
