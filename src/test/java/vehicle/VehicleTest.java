@@ -66,4 +66,5 @@ public class VehicleTest {
         //then
         Assert.assertEquals(expected,actual);
     }
+
 }
