@@ -9,5 +9,5 @@ public interface Rideable<SomeTypeOfRider extends Rider> {
 
     void dismount(SomeTypeOfRider rider);
 
-    List<Rider> getPassengers();
+    List<SomeTypeOfRider> getPassengers();
 }

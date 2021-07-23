@@ -7,7 +7,7 @@ import Interface.Rider;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable {
+public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMaker, Rideable<SomeTypeOfRider> {
     List<SomeTypeOfRider> riders = new ArrayList<>();
 
 
@@ -17,8 +17,8 @@ public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMak
     }
 
     @Override
-    public void mount(Rider rider) {
-        riders.add((SomeTypeOfRider) rider);
+    public void mount(SomeTypeOfRider rider) {
+        riders.add(rider);
     }
 
     @Override
@@ -27,7 +27,7 @@ public abstract class Vehicle<SomeTypeOfRider extends Rider> implements NoiseMak
     }
 
     @Override
-    public List<Rider> getPassengers() {
-        return null;
+    public List<SomeTypeOfRider> getPassengers() {
+        return riders;
     }
 }
