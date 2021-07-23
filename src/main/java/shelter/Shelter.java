@@ -5,7 +5,7 @@ import animal.Animal;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Shelter<SomeAnimalType extends Animal> implements Iterable{
+public abstract class Shelter<SomeAnimalType extends Animal> implements Iterable{
     private ArrayList<SomeAnimalType> animals;
     public Shelter() {
         this.animals=new ArrayList<SomeAnimalType>();
@@ -28,10 +28,6 @@ public class Shelter<SomeAnimalType extends Animal> implements Iterable{
 
     public void remove(SomeAnimalType object) {
         animals.remove(object);
-    }
-
-    public SomeAnimalType get(Integer index) {
-        return animals.get(index);
     }
 
     @Override

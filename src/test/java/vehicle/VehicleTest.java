@@ -24,7 +24,6 @@ public class VehicleTest {
         //then
         Assert.assertEquals(expected,actual);
 
-
     }
     @Test
     public void dismountTest(){
