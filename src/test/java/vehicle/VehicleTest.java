@@ -1,6 +1,7 @@
 package vehicle;
 
 import Interface.Rider;
+import org.junit.Assert;
 import org.junit.Test;
 import person.Pilot;
 
@@ -13,8 +14,11 @@ public class VehicleTest {
 
         //when
         cropDuster.mount(pilot);
+        Integer expected = 1;
+        Integer actual = cropDuster.getPassengers().size();
 
         //then
+        Assert.assertEquals(expected,actual);
 
 
     }
