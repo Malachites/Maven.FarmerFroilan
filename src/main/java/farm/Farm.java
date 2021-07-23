@@ -9,9 +9,6 @@ import java.util.List;
 
 
 public class Farm {
-
-
-
     List<Stable> stables;
     List<ChickenCoop> chickenCoops;
     List<Field> fields;
@@ -24,28 +21,9 @@ public class Farm {
         fields = new ArrayList<>();
 
 
-
-    ArrayList<Stable> stables;
-    ArrayList<ChickenCoop> chickensC;
-    ArrayList<Field> fields;
-    FarmHouse farmHouse;
-    String farmName;
-
-    public Farm(String farmName) {
-        this.farmName = farmName;
-        stables = new ArrayList<Stable>();
-        chickensC = new ArrayList<ChickenCoop>();
-        fields = new ArrayList<Field>();
-
     }
 
-    public Farm(String farmName, ArrayList<Stable> stables, ArrayList<ChickenCoop> chickenCoops, ArrayList<Field> fields, FarmHouse farmHouse) {
-        this.farmName = farmName;
-        this.stables = stables;
-        this.chickensC = chickenCoops;
-        this.fields = fields;
-        this.farmHouse = farmHouse;
-    }
+
     public String getFarmName() {
         return farmName;
     }
@@ -62,26 +40,21 @@ public class Farm {
         this.stables = stables;
     }
 
-
     public List<ChickenCoop> getChickenCoops() {
         return chickenCoops;
-
-    public ArrayList<ChickenCoop> getChickenCoops() {
-        return chickensC;
-
     }
 
     public void setChickenCoops(ArrayList<ChickenCoop> chickenCoops) {
-        this.chickensC = chickenCoops;
+        this.chickenCoops = chickenCoops;
     }
 
 
     public void addChickenCoop(ChickenCoop someCoop) {
-        chickensC.add(someCoop);
+        chickenCoops.add(someCoop);
     }
 
-  public void addStable(Stable someStable){
-        stables.add(someStable);
+    public void addStable(Stable moreHorses){
+        stables.add(moreHorses);
     }
 
     public FarmHouse getFarmHouse() {
@@ -95,3 +68,8 @@ public class Farm {
 
 
 }
+
+
+
+
+
