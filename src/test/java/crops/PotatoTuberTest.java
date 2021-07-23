@@ -3,8 +3,8 @@ package crops;
 
 import crop.PotatoTuber;
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 public class PotatoTuberTest {
     @Test
@@ -18,7 +18,7 @@ public class PotatoTuberTest {
         potato.hasBeenFertilized();
 
         //Then
-        Assertions.assertTrue(potato.hasBeenFertilized());
+        Assert.assertTrue(potato.hasBeenFertilized());
     }
 
     @Test
@@ -31,6 +31,6 @@ public class PotatoTuberTest {
         potato.yield();
 
         //Then
-        Assertions.assertTrue(potato.hasBeenHarvested());
+        Assert.assertTrue(potato.hasBeenHarvested());
     }
 }

@@ -1,6 +1,7 @@
 package crops;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 public class CropsTest {
     //tractor is a farm vehicle that can harvest a crop

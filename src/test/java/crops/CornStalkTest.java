@@ -2,10 +2,9 @@ package crops;
 
 
 import crop.CornStalk;
-
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 public class CornStalkTest {
     @Test
@@ -19,7 +18,7 @@ public class CornStalkTest {
         corn.hasBeenFertilized();
 
         //Then
-        Assertions.assertTrue(corn.hasBeenFertilized());
+        Assert.assertTrue(corn.hasBeenFertilized());
     }
 
     @Test
@@ -32,6 +31,6 @@ public class CornStalkTest {
         corn.yield();
 
         //Then
-        Assertions.assertTrue(corn.hasBeenHarvested());
+        Assert.assertTrue(corn.hasBeenHarvested());
     }
 }

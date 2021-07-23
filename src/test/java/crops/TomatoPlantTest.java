@@ -1,10 +1,9 @@
 package crops;
 
-import crop.Tomato;
+
 import crop.TomatoPlant;
 import org.junit.Assert;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 
 //import static org.junit.Assert.assertEquals;
@@ -42,7 +41,7 @@ public class TomatoPlantTest {
         tomato.hasBeenFertilized();
 
         //Then
-        Assertions.assertTrue(tomato.hasBeenFertilized());
+        Assert.assertTrue(tomato.hasBeenFertilized());
     }
 
     @Test
@@ -55,7 +54,7 @@ public class TomatoPlantTest {
         tomato.yield();
 
         //Then
-        Assertions.assertTrue(tomato.hasBeenHarvested());
+        Assert.assertTrue(tomato.hasBeenHarvested());
     }
 }
 
