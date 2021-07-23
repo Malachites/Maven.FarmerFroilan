@@ -8,4 +8,5 @@ public interface Eater <TypeOfFood extends Edible> {
     default void eat(TypeOfFood food) {
         getStomach().add(food);
     }
+
 }
