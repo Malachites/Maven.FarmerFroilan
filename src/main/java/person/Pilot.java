@@ -11,7 +11,7 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     public String makeNoise(){
 
-        return "Hi, Plan go brrr!";
+        return "Hi, Plane go brrr!";
     }
 
 
