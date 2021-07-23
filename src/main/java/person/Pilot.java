@@ -6,8 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
+
+
+
     private ArrayList<Edible> stomach ;
     List<Rideable> pilotRider;
+
     public Pilot(String name) {
         super(name);
     }
@@ -20,6 +24,10 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     @Override
     public List<Edible> getStomach() {
+
+
+        return amountEaten;
+
         return stomach;
     }
 
@@ -32,7 +40,9 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
             return true;
         }
         return false;
+
     }
+
 
     @Override
     public void mount(Rideable rideable) {
@@ -41,6 +51,5 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     @Override
     public void disMount() {
-
     }
 }
