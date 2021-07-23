@@ -1,30 +1,12 @@
 package farm;
 
-import static org.junit.Assert.*;
-
-
-
 import crop.CornStalk;
 import crop.Crop;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class CropRowTest {
-
-    private Object CornStalk;
-
-    @Before
-    public void createTestData(){
-        CropRow rows = new CropRow();
-        Crop c = new CornStalk();
-
-
-
-    }
-
     private Crop CornStalk;
-
 
     @Test
     public void getSize(){
@@ -38,34 +20,13 @@ public class CropRowTest {
     public void addCropRowTest(){
     //GIVEN
         CropRow cropR = new CropRow();
-
-        Crop c = new CornStalk();
-        cropR.addCropRow(c);
-
         cropR.addCropRow(CornStalk);
 
-
     //WHEN
-
         Integer actual = cropR.getSize();
         Integer expected = 1;
     //THEN
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void removeCropRowTest(){
-        //GIVEN
-        CropRow cropR = new CropRow();
-        Crop c = new CornStalk();
-        cropR.addCropRow(c);
-        cropR.removeCrop(c);
-        //WHEN
-
-        Integer actual = cropR.getSize();
-        Integer expected = 0;
-        //THEN
-        assertEquals(expected, actual);
+        Assert.assertFalse(expected.equals(actual));
     }
 
 
