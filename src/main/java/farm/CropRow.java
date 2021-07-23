@@ -4,13 +4,15 @@ import crop.Crop;
 
 import java.util.ArrayList;
 
-public class CropRow< SomeTypeOfCrop extends Crop> {
+public class CropRow< SomeTypeOfCrop extends Crop> { /// THIS
+
 
         ArrayList<SomeTypeOfCrop> crops;
 
         public CropRow() {
             crops = new ArrayList<SomeTypeOfCrop>();
         }
+
 
         public Integer getSize() {
             return crops.size();
