@@ -28,20 +28,20 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
         return amountEaten;
 
-        return stomach;
+       // return stomach;
     }
 
-    @Override
-    public boolean eat(Edible edible) {
-        int beforeMeal = this.stomach.size();
-        this.stomach.add(edible);
-        int afterMeal = this.stomach.size();
-        if (beforeMeal < afterMeal) {
-            return true;
-        }
-        return false;
-
-    }
+//    @Override
+//    public boolean eat(Edible edible) {
+//        int beforeMeal = this.stomach.size();
+//        this.stomach.add(edible);
+//        int afterMeal = this.stomach.size();
+//        if (beforeMeal < afterMeal) {
+//            return true;
+//        }
+//        return false;
+//
+//    }
 
 
     @Override

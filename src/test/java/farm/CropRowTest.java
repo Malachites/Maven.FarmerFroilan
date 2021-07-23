@@ -20,11 +20,7 @@ public class CropRowTest {
         Crop c = new CornStalk();
 
 
-
     }
-
-    private Crop CornStalk;
-
 
     @Test
     public void getSize(){
@@ -36,20 +32,15 @@ public class CropRowTest {
 
     @Test
     public void addCropRowTest(){
-    //GIVEN
+        //GIVEN
         CropRow cropR = new CropRow();
-
         Crop c = new CornStalk();
         cropR.addCropRow(c);
-
-        cropR.addCropRow(CornStalk);
-
-
-    //WHEN
+        //WHEN
 
         Integer actual = cropR.getSize();
         Integer expected = 1;
-    //THEN
+        //THEN
         assertEquals(expected, actual);
     }
 
