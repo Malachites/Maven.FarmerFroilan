@@ -1,7 +1,9 @@
 package person;
 
 import Interface.*;
+import crop.Egg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
@@ -18,7 +20,8 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
 
     @Override
     public List<Edible> getStomach() {
-        return null;
+
+        return amountEaten;
     }
 
     @Override
