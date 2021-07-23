@@ -5,6 +5,7 @@ import Interface.*;
 import java.util.List;
 
 public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
+
     public Pilot(String name) {
         super(name);
     }
@@ -17,13 +18,10 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     @Override
     public List<Edible> getStomach() {
-        return null;
+
+        return amountEaten;
     }
 
-    @Override
-    public void eat(Edible edible) {
-
-    }
 
     @Override
     public void mount(Rideable rideable) {
@@ -32,6 +30,5 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
     @Override
     public void disMount() {
-
     }
 }
