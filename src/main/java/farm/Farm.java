@@ -5,15 +5,25 @@ import shelter.FarmHouse;
 import shelter.Stable;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Farm {
 
-    ArrayList<Stable> stables;
-    ArrayList<ChickenCoop> chickenCoops;
-    ArrayList<Field> fields;
+
+    List<Stable> stables;
+    List<ChickenCoop> chickenCoops;
+    List<Field> fields;
     FarmHouse farmHouse;
     String farmName;
 
+    public Farm(){
+        stables = new ArrayList<>();
+        chickenCoops = new ArrayList<>();
+        fields = new ArrayList<>();
+
+
+    }
 
 
     public String getFarmName() {
@@ -24,7 +34,7 @@ public class Farm {
         this.farmName = farmName;
     }
 
-    public ArrayList<Stable> getStables() {
+    public List<Stable> getStables() {
         return stables;
     }
 
@@ -32,7 +42,7 @@ public class Farm {
         this.stables = stables;
     }
 
-    public ArrayList<ChickenCoop> getChickenCoops() {
+    public List<ChickenCoop> getChickenCoops() {
         return chickenCoops;
     }
 
