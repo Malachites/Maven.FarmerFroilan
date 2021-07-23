@@ -1,4 +1,6 @@
 package vehicle;
 
-public class Tractor {
+import person.Farmer;
+
+public class Tractor extends Vehicle<Farmer>  {
 }

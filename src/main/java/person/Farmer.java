@@ -13,7 +13,7 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
 
     public String makeNoise(){
 
-        return "Hi, I am a farmer!";
+        return "Hi, Darn tootin'!";
     }
 
     @Override
