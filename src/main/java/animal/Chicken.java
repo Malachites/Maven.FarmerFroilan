@@ -24,7 +24,12 @@ public class Chicken extends Animal implements Produce, NoiseMaker {
     }
 
 
-    public Boolean hasBeenFertilized() {
+    @Override
+    public Edible yield() {
+        return null;
+    }
+
+    public boolean hasBeenFertilized() {
         return hasBeenFertilized();
     }
 }
