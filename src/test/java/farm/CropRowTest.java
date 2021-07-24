@@ -12,7 +12,7 @@ import org.junit.Test;
 
 public class CropRowTest {
 
-    private Object CornStalk;
+
 
     @Before
     public void createTestData(){
