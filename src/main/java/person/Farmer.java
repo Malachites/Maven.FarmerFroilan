@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
-
+    ArrayList<Rider> rider = new ArrayList<>();
 
     public Farmer(String name) {
         super(name);
@@ -24,6 +24,7 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
         return amountEaten;
     }
 
+
     @Override
     public void mount(Rideable rideable) {
 
@@ -31,6 +32,7 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
 
     @Override
     public void disMount() {
+
 
     }
 }

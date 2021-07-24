@@ -3,6 +3,7 @@ package person;
 import Interface.Eater;
 import Interface.Edible;
 import Interface.NoiseMaker;
+import Interface.Rideable;
 import crop.Crop;
 import farm.CropRow;
 
@@ -28,7 +29,5 @@ public class Botanist extends Person implements NoiseMaker, Eater<Edible> {
 
         return amountEaten;
     }
-
-
 
 }
