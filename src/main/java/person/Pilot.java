@@ -29,7 +29,6 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
         return amountEaten;
 
 
-    }
 
 //    @Override
 //    public boolean eat(Edible edible) {
