@@ -10,6 +10,7 @@ public abstract class Person extends Animal implements NoiseMaker, Eater<Edible>
     ArrayList<Edible> amountEaten;
 
 
+
     public Person(String name) {
         super(name);
         this.name = name;
@@ -24,7 +25,7 @@ public abstract class Person extends Animal implements NoiseMaker, Eater<Edible>
 
     public String makeNoise() {
 
-        return null;
+        return "Hey, you!";
     }
 
     public void eatAmount(Edible food){
