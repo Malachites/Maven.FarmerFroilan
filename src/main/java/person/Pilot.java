@@ -8,15 +8,14 @@ import java.util.List;
 public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
 
-
-//    private ArrayList<Edible> stomach ;
-//    List<Rideable> pilotRider;
+    private ArrayList<Edible> stomach;
+    List<Rideable> pilotRider;
 
     public Pilot(String name) {
         super(name);
     }
 
-    public String makeNoise(){
+    public String makeNoise() {
 
         return "Hi, Plane go brrr!";
     }
@@ -27,7 +26,6 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 
 
         return amountEaten;
-
 
 
 //    @Override
@@ -42,14 +40,15 @@ public class Pilot extends Person implements NoiseMaker, Eater<Edible>, Rider {
 //
 //    }
 
+    }
 
     @Override
     public void mount(Rideable rideable) {
-
 
     }
 
     @Override
     public void disMount() {
+
     }
 }
