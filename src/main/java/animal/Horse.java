@@ -9,28 +9,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Horse extends Animal implements Rideable, NoiseMaker {
-    private ArrayList<Edible> stomach ;
+//    private ArrayList<Edible> stomach ;
     List<Rider> horseRider;
+
     public Horse(String name) {
         super(name);
-        this.stomach = new ArrayList<Edible>();
+        horseRider = new ArrayList<>();
+
+//        this.stomach = new ArrayList<Edible>();
     }
 
     @Override
-    public List<Edible> getStomach() {
-        return stomach;
+    public List<Edible> getStomach(){
+        return amountEaten;
     }
+//    @Override
+//    public List<Edible> getStomach() {
+//        return stomach;
+//    }
 
-    @Override
-    public boolean eat(Edible edible) {
-        int beforeMeal = this.stomach.size();
-        this.stomach.add(edible);
-        int afterMeal = this.stomach.size();
-        if (beforeMeal < afterMeal) {
-            return true;
-        }
-        return false;
-    }
+//    @Override
+//    public boolean eat(Edible edible) {
+//        int beforeMeal = this.stomach.size();
+//        this.stomach.add(edible);
+//        int afterMeal = this.stomach.size();
+//        if (beforeMeal < afterMeal) {
+//            return true;
+//        }
+//        return false;
+//    }
 
 
     @Override
@@ -44,7 +51,7 @@ public class Horse extends Animal implements Rideable, NoiseMaker {
         }
 
     @Override
-    public List getPassengers() {
+    public List<Rider> getPassengers() {
         return horseRider;
     }
 
