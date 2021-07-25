@@ -3,13 +3,18 @@ package person;
 import Interface.*;
 import animal.Animal;
 
+import java.util.ArrayList;
+
 public abstract class Person extends Animal implements NoiseMaker, Eater<Edible> {
     String name;
+    ArrayList<Edible> amountEaten;
+
 
 
     public Person(String name) {
         super(name);
         this.name = name;
+        amountEaten = new ArrayList<Edible>();
 
     }
 
@@ -20,7 +25,11 @@ public abstract class Person extends Animal implements NoiseMaker, Eater<Edible>
 
     public String makeNoise() {
 
-        return null;
+        return "Hey, you!";
+    }
+
+    public void eatAmount(Edible food){
+        amountEaten.add(food);
     }
 
 }

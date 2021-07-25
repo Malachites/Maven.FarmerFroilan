@@ -1,11 +1,13 @@
 package person;
 
 import Interface.*;
+import crop.Egg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
-
+    ArrayList<Rider> rider = new ArrayList<>();
 
     public Farmer(String name) {
         super(name);
@@ -13,13 +15,15 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
 
     public String makeNoise(){
 
-        return "Hi, I am a farmer!";
+        return "Hi, Darn tootin'!";
     }
 
     @Override
     public List<Edible> getStomach() {
-        return null;
+
+        return amountEaten;
     }
+
 
     @Override
     public void mount(Rideable rideable) {
@@ -28,6 +32,7 @@ public class Farmer extends Person implements NoiseMaker, Rider, Eater<Edible> {
 
     @Override
     public void disMount() {
+
 
     }
 }

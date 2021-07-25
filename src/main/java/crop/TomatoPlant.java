@@ -1,22 +1,20 @@
 package crop;
 
+import Interface.Edible;
+
 public class TomatoPlant extends Crop {
 
-//    public Boolean isEdible(){
-//        if (hasBeenFertilized()){
-//            return true;
-//        }
-//            return false;
-//
-//    }
-    @Override
-    public Boolean hasBeenFertilized() {
-        return true;
+    public Edible yield() {
+        if (hasBeenFertilized() && hasBeenHarvested()) {
+            return new Tomato();
+        }
+        else {
+            return null;
+        }
     }
 
-
-//    @Override
-//    public Tomato yield() {
-//        return null;
-//    }
+    @Override
+    public boolean hasBeenFertilized() {
+        return true;
+    }
 }

@@ -1,4 +1,9 @@
 package vehicle;
 
-public class Tractor {
+import com.zipcodewilmington.froilansfarm.FarmRoutine;
+import farm.Field;
+import person.Farmer;
+
+public class Tractor extends Vehicle<Farmer>  {
+
 }

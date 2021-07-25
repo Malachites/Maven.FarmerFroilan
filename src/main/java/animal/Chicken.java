@@ -3,28 +3,46 @@ package animal;
 import Interface.Edible;
 import Interface.NoiseMaker;
 import Interface.Produce;
+import crop.Egg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Chicken extends Animal implements Produce, NoiseMaker {
-
+//    private ArrayList<Edible> stomach ;
     public Chicken(String name) {
         super(name);
+//        this.stomach = new ArrayList<Edible>();
     }
 
-
-    public List<Edible> getStomach() {
-        return null;
-    }
-
-
+//    public boolean eat(Edible edible) {
+//        int beforeMeal = this.stomach.size();
+//        this.stomach.add(edible);
+//        int afterMeal = this.stomach.size();
+//        if (beforeMeal < afterMeal) {
+//            return true;
+//        }
+//        return false;
+//    }
     public String makeNoise() {
-
-        return null;
+        String noise = "cluck, cluck, cluck";
+        return noise;
     }
 
+//    public List<Edible> getStomach() {
+//        return stomach;
+//    }
+    public List<Edible> getStomach(){
+        return amountEaten;
+    }
 
-    public Boolean hasBeenFertilized() {
-        return hasBeenFertilized();
+    @Override
+    public Edible yield() {
+        return new Egg();
+    }
+
+    @Override
+    public boolean hasBeenFertilized() {
+        return true;
     }
 }
