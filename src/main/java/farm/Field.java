@@ -5,15 +5,21 @@ import shelter.Shelter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Field {
 
-    ArrayList<CropRow> field;
+    List<CropRow> field;
 
     //HashMap<String, Integer> storesCropRows = new HashMap<>();
 
+    public Field(List<CropRow> field){
+        this.field = field;
+    }
+
     public Field(){
-        this.field = new ArrayList<>();
+
+        this(new ArrayList<>());
     }
 
 
