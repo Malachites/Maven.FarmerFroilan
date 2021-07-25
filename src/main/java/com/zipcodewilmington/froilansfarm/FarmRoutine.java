@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+
 import animal.Chicken;
 import animal.Horse;
 import crop.CornStalk;
@@ -17,10 +18,12 @@ import vehicle.Tractor;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class FarmRoutine {
     public Field field;
     public Farmer froilan;
     public Pilot froilanda;
+
     private List<ChickenCoop> chickenCoopList;
     private List<Stable> stableList;
     public Tractor tractor;
@@ -95,3 +98,7 @@ public class FarmRoutine {
         return chickenCoopList;
    }
 }
+
+}
+
+
