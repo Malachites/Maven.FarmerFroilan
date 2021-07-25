@@ -27,8 +27,8 @@ import vehicle.Vehicle;
 //like our exam
 public class MainApplication {
     public static void main(String[] args) {
-
     }
+
 //        DaysOfTheWeek simulation = new DaysOfTheWeek();
 //        simulation.monday();
 //        simulation.tuesday();
@@ -37,3 +37,4 @@ public class MainApplication {
 //        simulation.friday();
 //        simulation.saturday();
 //        simulation.sunday();
+}
